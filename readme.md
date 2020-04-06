@@ -25,7 +25,7 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__.'/src')
     ->in(__DIR__.'/tests');
 
-// the call and return the result of the following method...
+// then call and return the following global function...
 
 return style_rules($finder);
 ```
