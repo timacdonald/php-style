@@ -9,7 +9,7 @@ These are the rules applied across my personal projects and open source packages
 You can install using [composer](https://getcomposer.org/) from [Packagist](https://packagist.org/packages/timacdonald/php-style).
 
 ```
-$ composer require timacdonald/php-style --dev
+$ composer require timacdonald/php-style:dev-master --dev
 ```
 
 ## Basic usage
