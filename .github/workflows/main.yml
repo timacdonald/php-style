@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    name: "Style check"
+
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        extensions: json, tokenizer
+        coverage: none
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+          path: ~/.composer/cache/files
+          key: dependencies-composer-${{ hashFiles('composer.json') }}-v1
+
+    - name: Install dependencies
+      run: composer install --verbose --prefer-dist --no-interaction --no-suggest
+
+    - name: Check platform requirements
+      run: composer check-platform-reqs --verbose
+
+    - name: Check style
+      run: ./vendor/bin/php-cs-fixer fix --dry-run --no-interaction --verbose
