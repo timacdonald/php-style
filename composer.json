@@ -20,5 +20,11 @@
         "files": [
             "./helpers.php"
         ]
+    },
+    "scripts": {
+        "lint": [
+            "clear",
+            "./vendor/bin/php-cs-fixer fix"
+        ]
     }
 }
