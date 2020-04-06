@@ -1,0 +1,24 @@
+{
+    "name": "timacdonald/php-style",
+    "description": "Opinionated styling for my projects",
+    "license": "MIT",
+    "keywords": [
+        "PHP",
+        "style"
+    ],
+    "authors": [
+        {
+            "name": "Tim MacDonald",
+            "email": "hello@timacdonald.me",
+            "homepage": "https://timacdonald.me"
+        }
+    ],
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "files": [
+            "./helpers.php"
+        ]
+    }
+}
