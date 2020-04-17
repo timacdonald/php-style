@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+// last revision: v2.16.3 Yellow Bird
+
 return PhpCsFixer\Config::create()
     ->setFinder($finder)
     ->setRiskyAllowed(true)
@@ -39,6 +41,8 @@ return PhpCsFixer\Config::create()
         'explicit_string_variable' => true,
         'final_class' => false,
         'final_internal_class' => false,
+        'final_public_method_for_abstract_class' => false,
+        'final_static_access' => true,
         'fopen_flag_order' => true,
         'fopen_flags' => true,
         'fully_qualified_strict_types' => true,
@@ -53,6 +57,11 @@ return PhpCsFixer\Config::create()
         ],
         'function_typehint_space' => true,
         'general_phpdoc_annotation_remove' => false,
+        'global_namespace_import' => [
+            'import_classes' => true,
+            'import_constants' => true,
+            'import_functions' => true,
+        ],
         'header_comment' => false,
         'heredoc_indentation' => true,
         'heredoc_to_nowdoc' => true,
@@ -61,7 +70,9 @@ return PhpCsFixer\Config::create()
         'increment_style' => true,
         'is_null' => true,
         'linebreak_after_opening_tag' => true,
-        'list_syntax' => true,
+        'list_syntax' => [
+            'syntax' => 'short',
+        ],
         'logical_operators' => true,
         'lowercase_cast' => true,
         'lowercase_static_reference' => true,
@@ -95,7 +106,6 @@ return PhpCsFixer\Config::create()
         'no_leading_namespace_whitespace' => true,
         'no_mixed_echo_print' => true,
         'no_multiline_whitespace_around_double_arrow' => true,
-        'no_multiline_whitespace_before_semicolons' => true,
         'no_null_property_initialization' => true,
         'no_php4_constructor' => true,
         'no_short_bool_cast' => true,
@@ -123,10 +133,11 @@ return PhpCsFixer\Config::create()
         'normalize_index_brace' => true,
         'not_operator_with_space' => false,
         'not_operator_with_successor_space' => true,
+        'nullable_type_declaration_for_default_null_value' => true,
         'object_operator_without_whitespace' => true,
         'ordered_class_elements' => false,
         'ordered_imports' => [
-            'sort_algorithm' => 'length',
+            'sort_algorithm' => 'alpha',
         ],
         'ordered_interfaces' => true,
         'php_unit_construct' => true,
@@ -141,10 +152,10 @@ return PhpCsFixer\Config::create()
         'php_unit_mock' => true,
         'php_unit_mock_short_will_return' => true,
         'php_unit_namespaced' => true,
-        'php_unit_no_expectation_annotation' => false,
+        'php_unit_no_expectation_annotation' => true,
         'php_unit_ordered_covers' => true,
         'php_unit_set_up_tear_down_visibility' => true,
-        'php_unit_size_class' => false,
+        'php_unit_size_class' => true,
         'php_unit_strict' => true,
         'php_unit_test_annotation' => true,
         'php_unit_test_case_static_method_calls' => [
@@ -169,7 +180,7 @@ return PhpCsFixer\Config::create()
         'phpdoc_inline_tag' => true,
         'phpdoc_no_access' => true,
         'phpdoc_no_alias_tag' => true,
-        'phpdoc_no_empty_return' => false,
+        'phpdoc_no_empty_return' => true,
         'phpdoc_no_package' => true,
         'phpdoc_no_useless_inheritdoc' => true,
         'phpdoc_order' => true,
@@ -179,6 +190,7 @@ return PhpCsFixer\Config::create()
         'phpdoc_single_line_var_spacing' => true,
         'phpdoc_summary' => true,
         'phpdoc_to_comment' => false,
+        'phpdoc_to_param_type' => false,
         'phpdoc_to_return_type' => true,
         'phpdoc_trim' => true,
         'phpdoc_trim_consecutive_blank_line_separation' => true,
@@ -195,6 +207,7 @@ return PhpCsFixer\Config::create()
         'return_assignment' => true,
         'return_type_declaration' => true,
         'self_accessor' => true,
+        'self_static_accessor' => true,
         'semicolon_after_instruction' => true,
         'set_type_to_cast' => true,
         'short_scalar_cast' => true,
@@ -202,6 +215,7 @@ return PhpCsFixer\Config::create()
         'simplified_null_return' => true,
         'single_blank_line_before_namespace' => true,
         'single_line_comment_style' => true,
+        'single_line_throw' => true,
         'single_quote' => true,
         'single_trait_insert_per_statement' => false,
         'space_after_semicolon' => true,
