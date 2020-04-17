@@ -18,11 +18,11 @@
     },
     "autoload": {
         "files": [
-            "./helpers.php"
+            "./src/helpers.php"
         ]
     },
     "scripts": {
-        "lint": [
+        "fix": [
             "clear",
             "./vendor/bin/php-cs-fixer fix"
         ]
