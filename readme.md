@@ -1,6 +1,6 @@
 # Opinionated styling rules for PHP-CS-Fixer
 
-![CI](https://github.com/timacdonald/php-style/workflows/CI/badge.svg) [![Latest Stable Version](https://poser.pugx.org/timacdonald/php-style/v/stable)](https://packagist.org/packages/timacdonald/php-style) [![Total Downloads](https://poser.pugx.org/timacdonald/php-style/downloads)](https://packagist.org/packages/timacdonald/php-style) [![License](https://poser.pugx.org/timacdonald/php-style/license)](https://packagist.org/packages/timacdonald/php-style)
+![CI](https://github.com/timacdonald/php-style/workflows/CI/badge.svg)
 
 These are the rules applied across my personal projects and open source packages.
 
