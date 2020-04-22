@@ -7,9 +7,10 @@ use PhpCsFixer\Finder;
 
 function style_rules(Finder $finder, array $rules = []): Config
 {
-    $config = require __DIR__.'/rules.php';
+    $rules = \array_merge(require __DIR__.'/rules.php', $rules);
 
-    \assert($config instanceof Config);
-
-    return $config->setRules(\array_merge($config->getRules(), $rules));
+    return PhpCsFixer\Config::create()
+        ->setFinder($finder)
+        ->setRiskyAllowed(true)
+        ->setRules($rules);
 }
