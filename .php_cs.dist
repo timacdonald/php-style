@@ -1,6 +1,3 @@
 <?php
 
-$finder = PhpCsFixer\Finder::create()
-    ->in(__DIR__);
-
-return style_rules($finder);
+return TiMacDonald\styles(PhpCsFixer\Finder::create()->in(__DIR__.'/src'));

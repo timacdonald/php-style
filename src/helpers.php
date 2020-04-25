@@ -2,14 +2,17 @@
 
 declare(strict_types=1);
 
+namespace TiMacDonald;
+
+use function array_merge;
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
-function style_rules(Finder $finder, array $rules = []): Config
+function styles(Finder $finder, array $rules = []): Config
 {
-    $rules = \array_merge(require __DIR__.'/rules.php', $rules);
+    $rules = array_merge(require __DIR__.'/rules.php', $rules);
 
-    return PhpCsFixer\Config::create()
+    return Config::create()
         ->setFinder($finder)
         ->setRiskyAllowed(true)
         ->setRules($rules);
