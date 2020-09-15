@@ -187,7 +187,7 @@ return [
     'phpdoc_summary' => true,
     'phpdoc_to_comment' => false,
     'phpdoc_to_param_type' => false,
-    'phpdoc_to_return_type' => true,
+    'phpdoc_to_return_type' => false,
     'phpdoc_trim' => true,
     'phpdoc_trim_consecutive_blank_line_separation' => true,
     'phpdoc_types' => true,
