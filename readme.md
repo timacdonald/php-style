@@ -27,7 +27,7 @@ $finder = PhpCsFixer\Finder::create()
 
 // then call and return the following global function...
 
-return style_rules($finder);
+return TiMacDonald\styles($finder);
 ```
 
 ## Thanksware
